@@ -80,6 +80,7 @@ void main() {
 export const particleFragmentShader = /* glsl */ `
 uniform vec3 uColor1;
 uniform vec3 uColor2;
+uniform vec3 uColor3;
 
 varying float vAlpha;
 varying float vRandom;
@@ -93,8 +94,10 @@ void main() {
   float alpha = 1.0 - smoothstep(0.3, 0.5, dist);
   alpha *= vAlpha;
 
-  // Gradient between two accent colors based on random
-  vec3 color = mix(uColor1, uColor2, vRandom);
+  // Three-stop gradient matching the hero text: purple → teal → orange
+  vec3 color = vRandom < 0.5
+    ? mix(uColor1, uColor2, vRandom * 2.0)
+    : mix(uColor2, uColor3, (vRandom - 0.5) * 2.0);
 
   gl_FragColor = vec4(color, alpha * 0.8);
 }
