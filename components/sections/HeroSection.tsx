@@ -70,6 +70,16 @@ export function HeroSection() {
         <SceneCanvas />
       </div>
 
+      {/* Scrim: subtle centre darkening so text reads cleanly over particles */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 50% at 50% 50%, rgba(10, 10, 15, 0.45) 0%, rgba(10, 10, 15, 0.0) 100%)",
+          zIndex: 1,
+        }}
+      />
+
       {/* Content Overlay */}
       <div className="section-padding relative z-10 text-center">
         <p
