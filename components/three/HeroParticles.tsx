@@ -37,8 +37,8 @@ export function HeroParticles() {
     () => ({
       uTime: { value: 0 },
       uMouse: { value: new THREE.Vector2(0, 0) },
-      uColor1: { value: new THREE.Color("#46399a") },
-      uColor2: { value: new THREE.Color("#008f72") },
+      uColor1: { value: new THREE.Color("#6c5ce7") },
+      uColor2: { value: new THREE.Color("#00d4aa") },
       uColor3: { value: new THREE.Color("#a84a0d") },
       uPixelRatio: {
         value: typeof window !== "undefined"

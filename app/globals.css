@@ -67,22 +67,12 @@ html.lenis body {
 
 /* Gradient text utility */
 .gradient-text {
-  background: radial-gradient(
-    ellipse 120% 80% at 55% 45%,
-    var(--accent-cyan) 0%,
-    var(--accent) 50%,
-    var(--accent-warm) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
-  /* Multi-layer glow matching the Bloom quality of the particle field */
-  filter:
-    drop-shadow(0 0 8px rgba(108, 92, 231, 0.55))
-    drop-shadow(0 0 20px rgba(0, 212, 170, 0.35))
-    drop-shadow(0 0 45px rgba(253, 112, 20, 0.20))
-    drop-shadow(0 0 80px rgba(108, 92, 231, 0.12));
+  color: #ffffff;
+  text-shadow:
+    0 0 15px rgba(0, 212, 170, 0.90),
+    0 0 35px rgba(108, 92, 231, 0.70),
+    0 0 70px rgba(253, 112, 20, 0.45),
+    0 0 130px rgba(0, 212, 170, 0.20);
 }
 
 /* Section padding utility */
